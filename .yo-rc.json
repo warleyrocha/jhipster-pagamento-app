@@ -40,7 +40,9 @@
     "pages": [],
     "creationTimestamp": 1627848819629,
     "jwtSecretKey": "ZmU3Y2ZjY2NjY2IxOGI2ZGMwNGQ2NzdlZDQzNzg0NWY0NTU0ZmMzMGZiMjcwNDhkNzIyZmI5N2RjOTIzYTEzMjk5M2Q4MzhjMWQ3MzgzZDIyZjc3NDI1NGMzNjQxYzlhZmYzNDM5N2IxM2JhNWNlY2E3MzE2ZDcxYjIyN2QyY2E=",
-    "reactive": false
+    "reactive": false,
+    "entities": ["Curso", "Cliente", "Parcela"],
+    "lastLiquibaseTimestamp": 1627849615000
   },
   "git-provider": "GitHub",
   "git-company": "warleyrocha",
