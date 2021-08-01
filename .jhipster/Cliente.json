@@ -1,0 +1,48 @@
+{
+  "name": "Cliente",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cpf",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telefone",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "parcela",
+      "otherEntityRelationshipName": "cliente",
+      "relationshipName": "parcela"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "curso",
+      "otherEntityRelationshipName": "cliente",
+      "relationshipName": "curso"
+    }
+  ],
+  "entityTableName": "cliente",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "PagamentoApplication",
+  "clientRootFolder": "PagamentoApplication",
+  "databaseType": "sql",
+  "changelogDate": "20210801202654"
+}
