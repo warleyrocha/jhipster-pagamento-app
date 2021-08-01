@@ -1,0 +1,42 @@
+
+entity Curso{
+	nome String
+}
+
+entity Cliente {
+	nome String,
+    cpf String,
+    email String,
+    telefone String,
+}
+
+entity Parcela {
+    documento Long,
+    idTransacao String,
+    valor BigDecimal,
+    numero Integer,
+    total Integer,
+    status Status
+}
+
+enum Status {
+    PENDENTE, PAGO, ATRASADA
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Cliente to Curso{cliente},
+	Parcela to Cliente{parcela}
+}
+
+// Set pagination options
+paginate Cliente, Parcela  with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except Curso
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
